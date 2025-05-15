@@ -20,6 +20,16 @@ public class UsuarioService {
         return repo.findAll();
     }
 
-    public
+    public Usuario guardar(Usuario usuario){
+        return repo.save(usuario);
+    }
+
+    public Usuario buscar(Long id){
+        return repo.findById(id).orElse(null);
+    }
+
+    public void eliminar(Long id){
+        repo.deleteById(id);
+    }
 
 }
